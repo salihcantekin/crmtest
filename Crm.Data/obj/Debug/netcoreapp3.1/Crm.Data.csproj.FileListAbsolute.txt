@@ -1,0 +1,12 @@
+C:\Projects\Projects\DockerProjects\TestProjects\CRM\CRM\Crm.Data\bin\Debug\netcoreapp3.1\Crm.Data.deps.json
+C:\Projects\Projects\DockerProjects\TestProjects\CRM\CRM\Crm.Data\bin\Debug\netcoreapp3.1\Crm.Data.dll
+C:\Projects\Projects\DockerProjects\TestProjects\CRM\CRM\Crm.Data\obj\Debug\netcoreapp3.1\Crm.Data.csprojAssemblyReference.cache
+C:\Projects\Projects\DockerProjects\TestProjects\CRM\CRM\Crm.Data\obj\Debug\netcoreapp3.1\Crm.Data.AssemblyInfoInputs.cache
+C:\Projects\Projects\DockerProjects\TestProjects\CRM\CRM\Crm.Data\obj\Debug\netcoreapp3.1\Crm.Data.AssemblyInfo.cs
+C:\Projects\Projects\DockerProjects\TestProjects\CRM\CRM\Crm.Data\bin\Debug\netcoreapp3.1\Crm.Data.runtimeconfig.json
+C:\Projects\Projects\DockerProjects\TestProjects\CRM\CRM\Crm.Data\bin\Debug\netcoreapp3.1\Crm.Data.runtimeconfig.dev.json
+C:\Projects\Projects\DockerProjects\TestProjects\CRM\CRM\Crm.Data\obj\Debug\netcoreapp3.1\Crm.Data.genruntimeconfig.cache
+C:\Projects\Projects\DockerProjects\TestProjects\CRM\CRM\Crm.Data\bin\Debug\netcoreapp3.1\Crm.Data.pdb
+C:\Projects\Projects\DockerProjects\TestProjects\CRM\CRM\Crm.Data\obj\Debug\netcoreapp3.1\Crm.Data.csproj.CoreCompileInputs.cache
+C:\Projects\Projects\DockerProjects\TestProjects\CRM\CRM\Crm.Data\obj\Debug\netcoreapp3.1\Crm.Data.dll
+C:\Projects\Projects\DockerProjects\TestProjects\CRM\CRM\Crm.Data\obj\Debug\netcoreapp3.1\Crm.Data.pdb

@@ -1,0 +1,32 @@
+version: '3.1'
+services:
+  db-postgresql:
+   image: postgres
+   restart: on-failure
+   ports:
+    - "5432:5432" 
+   networks:
+    - mynet
+   environment:
+    - PGDATA=/var/lib/postgresql/data/pgdata
+    - POSTGRES_USER=postgres
+    - POSTGRES_PASSWORD=241990
+   volumes:
+    - db-data:/var/lib/postgresql/data
+
+  s_crmapi:
+   image: crmapi
+   ports:
+    - "80:1000"
+   networks:
+    - mynet
+   deploy:
+    replicas: 3
+    restart_policy:
+     condition: on-failure
+
+volumes:
+ db-data:
+
+networks:
+ mynet:
