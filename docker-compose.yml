@@ -12,12 +12,14 @@ services:
     - POSTGRES_USER=postgres
     - POSTGRES_PASSWORD=241990
    volumes:
-    - db-data:/var/lib/postgresql/data
+    - /opt/app_data/postgresql:/var/lib/postgresql/data
 
-  s_crmapi:
+  crmapi:
    image: crmapi
    ports:
     - "80:1000"
+   depends_on:
+     - db-postgresql
    networks:
     - mynet
    deploy:
@@ -25,8 +27,7 @@ services:
     restart_policy:
      condition: on-failure
 
-volumes:
- db-data:
 
 networks:
- mynet:
+  mynet:
+    external: true
