@@ -15,8 +15,7 @@ services:
     - /opt/app_data/postgresql:/var/lib/postgresql/data
 
   crmapi:
-   build:
-     context: .
+   build: .
    image: crmapi
    ports:
     - "80:1000"
