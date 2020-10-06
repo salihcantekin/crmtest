@@ -36,6 +36,8 @@ namespace Crm.API
                     builder.EnableRetryOnFailure(5, TimeSpan.FromSeconds(2), null);
                 });
             });
+
+            services.AddHttpContextAccessor();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

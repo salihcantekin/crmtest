@@ -14,10 +14,12 @@ namespace Crm.API.Controllers
     public class ContactController : ControllerBase
     {
         private readonly CrmDbContext context;
+        private readonly IHttpContextAccessor accessor;
 
-        public ContactController(CrmDbContext Context)
+        public ContactController(CrmDbContext Context, IHttpContextAccessor Accessor)
         {
             context = Context;
+            accessor = Accessor;
         }
 
         [HttpGet]
@@ -30,6 +32,12 @@ namespace Crm.API.Controllers
         public Contact GetById(int id)
         {
             return context.Contact.FirstOrDefault(i => i.Id == id);
+        }
+
+        [HttpGet("Test")]
+        public String Test()
+        {
+            return accessor.HttpContext.Connection.RemoteIpAddress.ToString();
         }
     }
 }
