@@ -16,7 +16,6 @@ services:
 
   crmapi:
    image: salihcantekin/crmapi
-   build: .
    ports:
     - 90:1000
     - 91:1001
