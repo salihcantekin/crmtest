@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crm.API", "Crm.API\Crm.API.csproj", "{8B8470E5-4129-4932-9853-DB8E52AEC802}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crm.Data", "Crm.Data\Crm.Data.csproj", "{904DE272-3FCF-4D4E-876F-FC7F5273A328}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Crm.API", "Crm.API\Crm.API.csproj", "{8B8470E5-4129-4932-9853-DB8E52AEC802}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FB14261A-C990-4B22-8910-F34BE58DF465}"
 	ProjectSection(SolutionItems) = preProject
@@ -23,10 +21,6 @@ Global
 		{8B8470E5-4129-4932-9853-DB8E52AEC802}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B8470E5-4129-4932-9853-DB8E52AEC802}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B8470E5-4129-4932-9853-DB8E52AEC802}.Release|Any CPU.Build.0 = Release|Any CPU
-		{904DE272-3FCF-4D4E-876F-FC7F5273A328}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{904DE272-3FCF-4D4E-876F-FC7F5273A328}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{904DE272-3FCF-4D4E-876F-FC7F5273A328}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{904DE272-3FCF-4D4E-876F-FC7F5273A328}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

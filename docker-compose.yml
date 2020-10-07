@@ -16,7 +16,7 @@ services:
 
   crmapi:
    build: /Crm.API
-   image: salihcantekin/crmapi
+   image: crmapi
    ports:
     - "90:1000"
    #depends_on:
