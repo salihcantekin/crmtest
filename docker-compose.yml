@@ -25,7 +25,7 @@ services:
    networks:
     - mynet
    deploy:
-    replicas: 3
+    replicas: 4
     restart_policy:
       max_attempts: 3
       condition: on-failure
