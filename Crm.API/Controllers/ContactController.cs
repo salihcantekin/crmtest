@@ -34,8 +34,8 @@ namespace Crm.API.Controllers
             return context.Contact.FirstOrDefault(i => i.Id == id);
         }
 
-        [HttpGet("Test")]
-        public String Test()
+        [HttpGet("GetIP")]
+        public String GetIP()
         {
             return accessor.HttpContext.Connection.RemoteIpAddress.ToString();
         }
