@@ -15,6 +15,7 @@ services:
   #  - /opt/app_data/postgresql:/var/lib/postgresql/data
 
   crmapi:
+   build: .
    image: salihcantekin/crmapi
    ports:
     - 90:1000
