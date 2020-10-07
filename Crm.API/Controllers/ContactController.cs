@@ -23,23 +23,18 @@ namespace Crm.API.Controllers
         }
 
         [HttpGet]
-        public Contact Get()
+        public String Get()
         {
-            return context.Contact.FirstOrDefault();   
+            String local = $"Local Ip Address: {accessor.HttpContext.Connection.LocalIpAddress.MapToIPv4()}";
+            String remote = $"Local Ip Address: {accessor.HttpContext.Connection.RemoteIpAddress.MapToIPv4()}";
+
+            return $"{local}\n{remote}";
         }
 
         [HttpGet("{id}")]
         public Contact GetById(int id)
         {
             return context.Contact.FirstOrDefault(i => i.Id == id);
-        }
-
-        [HttpGet("GetIP")]
-        public String GetIP()
-        {
-            return accessor.HttpContext.Connection.RemoteIpAddress.ToString();
-
-
         }
     }
 }

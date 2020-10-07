@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Crm.Data.Context;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -35,6 +36,11 @@ namespace Crm.API
                 {
                     builder.EnableRetryOnFailure(5, TimeSpan.FromSeconds(2), null);
                 });
+            });
+
+            services.Configure<ForwardedHeadersOptions>(options =>
+            {
+                options.ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
             });
 
             services.AddHttpContextAccessor();
