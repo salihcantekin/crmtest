@@ -18,7 +18,8 @@ services:
    image: salihcantekin/crmapi
    build: .
    ports:
-    - "90:1000"
+    - 90:1000
+    - 91:1001
    #depends_on:
    #  - db-postgresql
    networks:
