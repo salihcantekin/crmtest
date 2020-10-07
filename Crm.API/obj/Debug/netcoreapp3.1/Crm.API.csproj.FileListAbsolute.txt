@@ -17,3 +17,4 @@ C:\Projects\Projects\DockerProjects\TestProjects\CRM\CRM\Crm.API\obj\Debug\netco
 C:\Projects\Projects\DockerProjects\TestProjects\CRM\CRM\Crm.API\obj\Debug\netcoreapp3.1\Crm.API.dll
 C:\Projects\Projects\DockerProjects\TestProjects\CRM\CRM\Crm.API\obj\Debug\netcoreapp3.1\Crm.API.pdb
 C:\Projects\Projects\DockerProjects\TestProjects\CRM\CRM\Crm.API\obj\Debug\netcoreapp3.1\Crm.API.genruntimeconfig.cache
+C:\Projects\Projects\DockerProjects\TestProjects\CRM\CRM\Crm.API\obj\Debug\netcoreapp3.1\Crm.API.csprojAssemblyReference.cache
