@@ -32,7 +32,7 @@ namespace Crm.API
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseConfiguration(Configuration);
-                    webBuilder.UseUrls("http://*:1000");
+                    webBuilder.UseUrls("http://*:1000;https://*.1001");
                     webBuilder.UseStartup<Startup>();
                 });
     }
