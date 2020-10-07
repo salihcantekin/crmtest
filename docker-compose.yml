@@ -19,8 +19,8 @@ services:
    image: salihcantekin/crmapi
    ports:
     - "90:1000"
-   depends_on:
-     - db-postgresql
+   #depends_on:
+   #  - db-postgresql
    networks:
     - mynet
    deploy:
