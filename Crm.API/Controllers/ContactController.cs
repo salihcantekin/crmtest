@@ -16,9 +16,9 @@ namespace Crm.API.Controllers
         private readonly CrmDbContext context;
         private readonly IHttpContextAccessor accessor;
 
-        public ContactController(CrmDbContext Context, IHttpContextAccessor Accessor)
+        public ContactController(/*CrmDbContext Context, */IHttpContextAccessor Accessor)
         {
-            context = Context;
+            //context = Context;
             accessor = Accessor;
         }
 
@@ -31,10 +31,10 @@ namespace Crm.API.Controllers
             return $"{local}\n{remote}";
         }
 
-        [HttpGet("{id}")]
-        public Contact GetById(int id)
-        {
-            return context.Contact.FirstOrDefault(i => i.Id == id);
-        }
+        //[HttpGet("{id}")]
+        //public Contact GetById(int id)
+        //{
+        //    return context.Contact.FirstOrDefault(i => i.Id == id);
+        //}
     }
 }

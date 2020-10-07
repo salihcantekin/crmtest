@@ -30,13 +30,13 @@ namespace Crm.API
         {
             services.AddControllers();
 
-            services.AddDbContext<CrmDbContext>( conf => 
-            {
-                conf.UseNpgsql(Configuration.GetConnectionString("Postgresql"), builder =>
-                {
-                    builder.EnableRetryOnFailure(5, TimeSpan.FromSeconds(2), null);
-                });
-            });
+            //services.AddDbContext<CrmDbContext>( conf => 
+            //{
+            //    conf.UseNpgsql(Configuration.GetConnectionString("Postgresql"), builder =>
+            //    {
+            //        builder.EnableRetryOnFailure(5, TimeSpan.FromSeconds(2), null);
+            //    });
+            //});
 
             services.Configure<ForwardedHeadersOptions>(options =>
             {
