@@ -38,6 +38,8 @@ namespace Crm.API.Controllers
         public String GetIP()
         {
             return accessor.HttpContext.Connection.RemoteIpAddress.ToString();
+
+
         }
     }
 }
