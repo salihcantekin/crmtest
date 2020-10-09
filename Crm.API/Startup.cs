@@ -1,9 +1,12 @@
+using Crm.Data.Context;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpOverrides;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System;
 
 namespace Crm.API
 {
@@ -21,13 +24,13 @@ namespace Crm.API
         {
             services.AddControllers();
 
-            //services.AddDbContext<CrmDbContext>( conf => 
-            //{
-            //    conf.UseNpgsql(Configuration.GetConnectionString("Postgresql"), builder =>
-            //    {
-            //        builder.EnableRetryOnFailure(5, TimeSpan.FromSeconds(2), null);
-            //    });
-            //});
+            services.AddDbContext<CrmDbContext>(conf =>
+           {
+               conf.UseNpgsql(Configuration.GetConnectionString("Postgresql"), builder =>
+               {
+                   builder.EnableRetryOnFailure(5, TimeSpan.FromSeconds(2), null);
+               });
+           });
 
             services.Configure<ForwardedHeadersOptions>(options =>
             {

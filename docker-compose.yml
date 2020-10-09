@@ -1,18 +1,18 @@
 version: '3.1'
 services:
-  #db-postgresql:
-  # image: salihcantekin/postgres
-  # restart: on-failure
-  # ports:
-  #  - "5432:5432" 
-  # networks:
-  #  - mynet
-  # environment:
-  #  - PGDATA=/var/lib/postgresql/data/pgdata
-  #  - POSTGRES_USER=postgres
-  #  - POSTGRES_PASSWORD=241990
-  # volumes:
-  #  - /opt/app_data/postgresql:/var/lib/postgresql/data
+  db-postgresql:
+   image: salihcantekin/postgres
+   restart: on-failure
+   ports:
+    - 5432:5432
+   networks:
+    - custom_net
+   environment:
+    - PGDATA=/var/lib/postgresql/data/pgdata
+    - POSTGRES_USER=postgres
+    - POSTGRES_PASSWORD=241990
+   volumes:
+    - /mnt/nfs_shares/docker_app_data/postgresql:/var/lib/postgresql/data
 
   crmapi:
    build: .
@@ -20,12 +20,14 @@ services:
    ports:
     - 90:1000
     - 91:1001
-   #depends_on:
-   #  - db-postgresql
+   depends_on:
+     - db-postgresql
+   environment:
+     - ASPNETCORE_ENVIRONMENT=Production
    networks:
-    - mynet
+    - custom_net
    deploy:
-    replicas: 4
+    replicas: 1
     restart_policy:
       max_attempts: 3
       condition: on-failure

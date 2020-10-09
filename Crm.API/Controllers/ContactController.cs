@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Crm.Data.Context;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,10 +12,10 @@ namespace Crm.API.Controllers
     [ApiController]
     public class ContactController : ControllerBase
     {
-        //private readonly CrmDbContext context;
+        private readonly CrmDbContext context;
         private readonly IHttpContextAccessor accessor;
 
-        public ContactController(/*CrmDbContext Context, */IHttpContextAccessor Accessor)
+        public ContactController(CrmDbContext Context, IHttpContextAccessor Accessor)
         {
             //context = Context;
             accessor = Accessor;
