@@ -37,6 +37,5 @@ services:
       max_attempts: 3
       condition: on-failure
 
-
 networks:
   my_swarm_net:
