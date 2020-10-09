@@ -6,7 +6,7 @@ services:
    ports:
     - 5432:5432
    networks:
-    - custom_net
+    - my_swarm_net
    environment:
     - PGDATA=/var/lib/postgresql/data/pgdata
     - POSTGRES_USER=postgres
@@ -25,7 +25,7 @@ services:
    environment:
      - ASPNETCORE_ENVIRONMENT=Production
    networks:
-    - custom_net
+    - my_swarm_net
    deploy:
     replicas: 1
     restart_policy:
@@ -34,5 +34,4 @@ services:
 
 
 networks:
-  custom_net:
-    external: true
+  my_swarm_net:
