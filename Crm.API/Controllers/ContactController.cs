@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Crm.Data.Context;
+using Crm.Data.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -30,10 +31,10 @@ namespace Crm.API.Controllers
             return $"{local}\n{remote}";
         }
 
-        //[HttpGet("{id}")]
-        //public Contact GetById(int id)
-        //{
-        //    return context.Contact.FirstOrDefault(i => i.Id == id);
-        //}
+        [HttpGet("{id}")]
+        public Contact GetById(int id)
+        {
+            return context.Contact.FirstOrDefault(i => i.Id == id);
+        }
     }
 }
