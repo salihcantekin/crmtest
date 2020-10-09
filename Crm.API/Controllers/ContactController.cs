@@ -18,7 +18,7 @@ namespace Crm.API.Controllers
 
         public ContactController(CrmDbContext Context, IHttpContextAccessor Accessor)
         {
-            //context = Context;
+            context = Context;
             accessor = Accessor;
         }
 
