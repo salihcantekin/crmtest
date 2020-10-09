@@ -27,7 +27,7 @@ services:
    networks:
     - my_swarm_net
    deploy:
-    replicas: 1
+    replicas: 2
     restart_policy:
       max_attempts: 3
       condition: on-failure
