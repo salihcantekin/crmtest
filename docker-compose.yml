@@ -13,6 +13,11 @@ services:
     - POSTGRES_PASSWORD=241990
    volumes:
     - /mnt/nfs_shares/docker_app_data/postgresql:/var/lib/postgresql/data
+   deploy:
+    replicas: 2
+    restart_policy:
+      max_attempts: 3
+      condition: on-failure
 
   crmapi:
    build: .
