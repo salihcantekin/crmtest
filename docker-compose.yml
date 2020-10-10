@@ -18,6 +18,9 @@ services:
     restart_policy:
       max_attempts: 3
       condition: on-failure
+    placement: 
+     constraints: 
+       - node.role == worker
 
   crmapi:
    build: .
@@ -25,6 +28,7 @@ services:
    ports:
     - 90:1000
     - 91:1001
+   
    depends_on:
      - db-postgresql
    environment:
@@ -36,6 +40,9 @@ services:
     restart_policy:
       max_attempts: 3
       condition: on-failure
+    placement: 
+     constraints: 
+       - node.role == worker
 
 networks:
   my_swarm_net:
