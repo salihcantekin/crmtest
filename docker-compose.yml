@@ -4,7 +4,7 @@ services:
    image: salihcantekin/postgres
    restart: on-failure
    ports:
-    - 5432:5432
+    - 2345:5432
    networks:
     - my_swarm_net
    environment:
